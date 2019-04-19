@@ -5,13 +5,13 @@ using namespace std;
 class exercise 
 {
 private:
-  int number;
+  string name;
 public:
   exercise(){
-    cout<<"enter the number : ";cin>>number;
+    cout<<"enter your name : ";cin>>name;
   }
-  int printNumber(){
-     return number;
+  void printName(){
+     cout<<"hai <<name<<endl;
   }
 }
 
