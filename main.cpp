@@ -31,23 +31,32 @@ public:
 
 int main()
 {
-  exercise first;
-  char UOperator = first.getData();
-  repeat:
-  first.getData();
-  if(UOpreator!='+'||UOpreator!='+'||UOpreator!='+'||UOpreator!='+'){
-      cout<<"operator not is not found"<<endl;
-      goto repeat;
-  }else{
-      if (UOperator=='+'){
-          cout<<first.addition()<<endl;
-      }else if(UOperator='-'){
-          cout<<first.reduction()<<endl;
-      }else if(UOperator=='x'){
-          cout<<first.multiplication()<<endl;
-      }else{
-          cout<<first.division()<<endl;
-      }
+  char userOption;
+  while(true){
+      cout<<"do you want : ";cin>>userOption;
+      if(userOption=='y'){
+        exercise first;
+        char UOperator = first.getData();
+         repeat:
+        first.getData();
+        if(UOpreator!='+'||UOpreator!='+'||UOpreator!='+'||UOpreator!='+'){
+            cout<<"operator not is not found"<<endl;
+            goto repeat;
+        }else{
+            if (UOperator=='+'){
+                cout<<first.addition()<<endl;
+            }else if(UOperator='-'){
+                cout<<first.reduction()<<endl;
+             }else if(UOperator=='x'){
+                cout<<first.multiplication()<<endl;
+            }else{
+                cout<<first.division()<<endl;
+            }
+        }
+     }
+     else{
+         break;
+     }
   }
   _getch();
   return 0;
