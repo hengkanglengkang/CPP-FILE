@@ -32,18 +32,18 @@ public:
 int main()
 {
   exercise first;
-  char UOperator = first.getData();
+  char Uoperator = first.getData();
   repeat:
   first.getData();
-  if(UOpreator!='+'||UOpreator!='+'||UOpreator!='+'||UOpreator!='+'){
+  if(Uopreator!='+'||Uopreator!='+'||Uopreator!='+'||Uopreator!='+'){
       cout<<"operator not is not found"<<endl;
       goto repeat;
   }else{
-      if (UOperator=='+'){
+      if (Uoperator=='+'){
           cout<<first.addition()<<endl;
-      }else if(UOperator='-'){
+      }else if(Uoperator='-'){
           cout<<first.reduction()<<endl;
-      }else if(UOperator=='x'){
+      }else if(Uoperator=='x'){
           cout<<first.multiplication()<<endl;
       }else{
           cout<<first.division()<<endl;
