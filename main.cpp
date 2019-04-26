@@ -5,20 +5,50 @@ using namespace std;
 class exercise 
 {
 private:
-  string name;
+  int firstNumber, secondNUmber;
+  char userOperator;
 public:
-  exercise(){
-    cout<<"enter your name : ";cin>>name;
+  char getData(){
+      cout<<"masukkan angka pertama : ";cin>>firstNumber;
+      cout<<"masukkan operator : ";cin>>userOperator;
+      cout<<"masukkan angke kedua : ";cin>>seconNumber;
+      cout<<"hasilnya : ";
+      return userOperator;
   }
-  void printName(){
-     cout<<"hai <<name<<endl;
+  int addition(){
+      return firstNumber+secondNumber;
+  }
+  int reduction(){
+      return firstNumber-secondNumber;
+  }
+  int multiplication(){
+      return firstNumber*secondNumber;
+  }
+  int division(){
+      return firstNumber/secondNumber;
   }
 }
 
 int main()
 {
   exercise first;
-  cout<<first.printNumber<<endl;
+  char UOperator = first.getData();
+  repeat:
+  first.getData();
+  if(UOpreator!='+'||UOpreator!='+'||UOpreator!='+'||UOpreator!='+'){
+      cout<<"operator not is not found"<<endl;
+      goto repeat;
+  }else{
+      if (UOperator=='+'){
+          cout<<first.addition()<<endl;
+      }else if(UOperator='-'){
+          cout<<first.reduction()<<endl;
+      }else if(UOperator=='x'){
+          cout<<first.multiplication()<<endl;
+      }else{
+          cout<<first.division()<<endl;
+      }
+  }
   _getch();
   return 0;
 }
